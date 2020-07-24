@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".cadastro.CadastroMorador">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="@+id/nomeIncId"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/novoinquilino" />
+
+    <EditText
+        android:id="@+id/nomeIncId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName|textCapWords"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/btnCadastroInc"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/btn_cadastro"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.blackcat.currencyedittext.CurrencyEditText
+        android:id="@+id/editValorAluguel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="39dp"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="true"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastroInc"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastroInc" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/editCpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
+        android:hint="CPF"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/btnCadastroInc"
+        app:layout_constraintStart_toStartOf="@+id/editValorAluguel"
+        app:layout_constraintTop_toBottomOf="@+id/editTel"
+        app:met_mask="###.###.###-##" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:id="@+id/editTel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:hint="Telefone"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/editCpf"
+        app:layout_constraintStart_toStartOf="@+id/editCpf"
+        app:layout_constraintTop_toBottomOf="@+id/apartIncId"
+        app:met_mask="(##)# ####-####" />
+
+    <EditText
+        android:id="@+id/apartIncId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="N° Apartamento"
+        android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintStart_toStartOf="@+id/nomeIncId"
+        app:layout_constraintTop_toBottomOf="@+id/nomeIncId" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

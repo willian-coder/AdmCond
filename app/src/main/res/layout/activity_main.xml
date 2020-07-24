@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/background"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMoradoresId"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/inquilinos"
+            android:text="Moradores"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/btnAdicionarId"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/novoinquilino"
+            android:text="Adicionar"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:drawableTop="@drawable/contatos"
+            android:textSize="21sp"
+            android:text="Contatos"
+            android:background="@drawable/btn_main_formato">
+
+        </Button>
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/condominios"
+            android:text="Condomínios"
+            android:textSize="20sp">
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRelatorioId"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/relatorios"
+            android:text="Relatório"
+            android:textSize="21sp" />
+
+        <Button
+            android:id="@+id/btnSairId"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="25dp"
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/exit"
+            android:text="Sair"
+            android:textSize="21sp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

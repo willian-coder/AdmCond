@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ADMCond</string>
+
+    <!--Categorias-->
+    <string-array name="condominio">
+        <item>Condomínio</item> <!--Posição  0-->
+
+    </string-array>
+
+    <string name="consumoString">Consumo: </string>
+    <string name="totalString">Total: </string>
+    <string name="condominioString">Condomínio: </string>
+</resources>

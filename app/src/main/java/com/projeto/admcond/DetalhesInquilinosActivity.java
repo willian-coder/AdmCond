@@ -2,6 +2,7 @@ package com.projeto.admcond;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.Printer;
@@ -78,6 +79,7 @@ public class DetalhesInquilinosActivity extends AppCompatActivity {
                             if (!valorConta.isEmpty()) {
                                 salvaNovoConsumo();
                                 aviso("Dados salvos.");
+                                startActivity(new Intent());
                             } else {
                                 aviso("Informe o valor da conta.");
                             }

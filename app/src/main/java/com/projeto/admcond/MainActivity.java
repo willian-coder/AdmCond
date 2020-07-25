@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnMorador;
     private Button btnAdicionar;
     private Button btnRelatorio;
+    private Button btnSuporte;
     private Button btnSair;
 
     @Override
@@ -43,6 +44,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnSuporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), SuporteActivity.class));
+            }
+        });
+
         btnSair.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +63,9 @@ public class MainActivity extends AppCompatActivity {
         btnMorador = findViewById(R.id.btnMoradoresId);
         btnAdicionar = findViewById(R.id.btnAdicionarId);
         btnRelatorio = findViewById(R.id.btnRelatorioId);
+        btnSuporte = findViewById(R.id.btnSuporteId);
         btnSair = findViewById(R.id.btnSairId);
+
     }
 
 }

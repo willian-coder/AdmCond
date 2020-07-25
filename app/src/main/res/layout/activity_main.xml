@@ -45,14 +45,13 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/btnRelatorioId"
             android:layout_width="170dp"
             android:layout_height="170dp"
-            android:drawableTop="@drawable/contatos"
-            android:textSize="21sp"
-            android:text="Contatos"
-            android:background="@drawable/btn_main_formato">
-
-        </Button>
+            android:background="@drawable/btn_main_formato"
+            android:drawableTop="@drawable/relatorios"
+            android:text="Relatório"
+            android:textSize="21sp" />
 
         <Button
             android:layout_width="170dp"
@@ -74,14 +73,18 @@
         android:gravity="center"
         android:orientation="horizontal">
 
+
         <Button
-            android:id="@+id/btnRelatorioId"
+            android:id="@+id/btnSuporteId"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:background="@drawable/btn_main_formato"
-            android:drawableTop="@drawable/relatorios"
-            android:text="Relatório"
-            android:textSize="21sp" />
+            android:drawableTop="@drawable/contatos"
+            android:text="Suporte"
+            android:textSize="21sp">
+
+        </Button>
+
 
         <Button
             android:id="@+id/btnSairId"

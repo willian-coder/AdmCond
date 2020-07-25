@@ -10,4 +10,6 @@
     <string name="consumoString">Consumo: </string>
     <string name="totalString">Total: </string>
     <string name="condominioString">Condomínio: </string>
+
+    <string name="msgsuporte">Use os canais a baixo para solicitar alterações da aplicação, reportar algum erro, dicas de molhora.</string>
 </resources>

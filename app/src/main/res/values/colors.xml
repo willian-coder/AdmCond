@@ -11,4 +11,6 @@
     <color name="vermelho">#8B0000</color>
     <color name="adicionar">#009900</color>
     <color name="azulescuro">#00008B</color>
+
+    <color name="cor_btn_whats">#009900</color>
 </resources>

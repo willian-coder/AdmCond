@@ -1,3 +1,6 @@
+/*Por @willianlq --------
+
+--------*/
 package com.projeto.admcond.configfirebase;
 
 import com.google.firebase.database.DatabaseReference;
@@ -18,12 +21,12 @@ public class NovoInquilino implements Serializable {
     private String data;
     private String leitAnterior;
     private String leiturAtual;
-    public String consumo;
+    private String consumo;
     private String taxa;
     private String metroCubico;
-    public String total;
+    private String total;
     private String contaN;
-    public String condominio;
+    private String condominio;
 
     public NovoInquilino() {
         DatabaseReference novoInquilino = ConfigDb.getRefFirebase()
@@ -31,17 +34,27 @@ public class NovoInquilino implements Serializable {
         setIdInquilino(novoInquilino.push().getKey());
     }
 
+    //Ajustar
     public void salvar() {
         String idUsuario = ConfigDb.getIdUsuario();
         DatabaseReference novoUsuarioRef = ConfigDb.getRefFirebase()
                 .child("Inquilino");
 
-        String idConsumo = ConfigDb.getIdUsuario();
         novoUsuarioRef.child(idUsuario)
-                .child("-MCyWuzZv2g0TXTaZDrU") // TESTE
-                .child("Agua")
-                .child(idConsumo)
+                .child(getIdInquilino())
                 .setValue(this);
+
+    }
+
+    //Ajustar
+    public void salvarDadosConsumo() {
+        String idConsumo = ConfigDb.getIdUsuario();
+        DatabaseReference dbAgua = ConfigDb.getRefFirebase()
+                .child("Inquilino")
+                .child("Agua");
+        dbAgua.child(idConsumo)
+                .setValue(this);
+
     }
 
     public String getData() {
@@ -68,6 +81,10 @@ public class NovoInquilino implements Serializable {
         this.leiturAtual = leiturAtual;
     }
 
+    public String getConsumo() {
+        return consumo;
+    }
+
     public void setConsumo(String consumo) {
         this.consumo = consumo;
     }
@@ -88,6 +105,10 @@ public class NovoInquilino implements Serializable {
         this.metroCubico = metroCubico;
     }
 
+    public String getTotal() {
+        return total;
+    }
+
     public void setTotal(String total) {
         this.total = total;
     }
@@ -98,6 +119,10 @@ public class NovoInquilino implements Serializable {
 
     public void setConta(String contaN) {
         this.contaN = contaN;
+    }
+
+    public String getCondominio() {
+        return condominio;
     }
 
     public void setCondominio(String condominio) {

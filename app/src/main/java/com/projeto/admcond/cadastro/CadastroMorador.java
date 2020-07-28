@@ -1,5 +1,5 @@
 package com.projeto.admcond.cadastro;
-
+/*Created by Willianlq*/
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -40,7 +40,6 @@ public class CadastroMorador extends AppCompatActivity {
 
     }
 
-
     public NovoInquilino recuperaValores() {
         String nomeInquilino = nomeInc.getText().toString();
         String numeroApeInquilino = numeroApartInc.getText().toString();
@@ -62,30 +61,30 @@ public class CadastroMorador extends AppCompatActivity {
 
         novoInquilino = recuperaValores();
 
-            if (!novoInquilino.getNomeInquilino().isEmpty()) {
-                if (!novoInquilino.getNumeroApt().isEmpty()) {
-                    if (!novoInquilino.getNumeroTelefoneInc().isEmpty()) {
-                        if (!novoInquilino.getCpf().isEmpty()) {
-                            if (!novoInquilino.getValorAluguel().isEmpty()) {
-                                novoInquilino.salvar();
-                                aviso("Cadastro realizado com sucesso.");
-                                startActivity(new Intent(CadastroMorador.this, MainActivity.class));
-                                finish();
-                            } else {
-                                aviso("Informe o valor do aluguel");
-                            }
+        if (!novoInquilino.getNomeInquilino().isEmpty()) {
+            if (!novoInquilino.getNumeroApt().isEmpty()) {
+                if (!novoInquilino.getNumeroTelefoneInc().isEmpty()) {
+                    if (!novoInquilino.getCpf().isEmpty()) {
+                        if (!novoInquilino.getValorAluguel().isEmpty()) {
+                            novoInquilino.salvar();
+                            aviso("Cadastro realizado com sucesso.");
+                            startActivity(new Intent(CadastroMorador.this, MainActivity.class));
+                            finish();
                         } else {
-                            aviso("CPF inválido!");
+                            aviso("Informe o valor do aluguel");
                         }
                     } else {
-                        aviso("Campo telefone em branco!");
+                        aviso("CPF inválido!");
                     }
                 } else {
-                    aviso("Numero do Apt em branco!");
+                    aviso("Campo telefone em branco!");
                 }
             } else {
-                aviso("Nome do morador em branco!");
+                aviso("Numero do Apt em branco!");
             }
+        } else {
+            aviso("Nome do morador em branco!");
+        }
     }
 
     public void inicializaComponentes() {

@@ -1,5 +1,5 @@
 package com.projeto.admcond;
-
+/*Created by Willianlq*/
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ShareCompat;
 

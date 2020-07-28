@@ -1,8 +1,9 @@
 package com.projeto.admcond.adpter;
-
+/*Created by Willianlq*/
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -27,7 +28,6 @@ public class AdapterMoradores extends RecyclerView.Adapter<AdapterMoradores.MyVi
 
     @NonNull
     @Override
-
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.adapter_moradores, parent, false);
         return new MyViewHolder(item);
@@ -46,7 +46,7 @@ public class AdapterMoradores extends RecyclerView.Adapter<AdapterMoradores.MyVi
         return inquilinos.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
         TextView apartamento;
         TextView nomeInquilino;
 

@@ -59,6 +59,7 @@
         android:layout_marginBottom="33dp"
         android:background="@drawable/btn_cadastro"
         android:text="Cadastro"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/textView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"

@@ -1,9 +1,7 @@
 package com.projeto.admcond.configfirebase;
-
+/*Created by Willianlq*/
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
-import com.projeto.admcond.configfirebase.ConfigDb;
-import com.projeto.admcond.configfirebase.NovoUsuario;
 
 public class NovoCondominio {
     private String idCondominio;
@@ -21,7 +19,8 @@ public class NovoCondominio {
     public void salvar() {
         DatabaseReference novoUsuarioRef = ConfigDb.getRefFirebase();
         novoUsuarioRef.child("Condominio")
-                .child(getIdCondominio())
+
+                .child(getNomeCondominio())
                 .setValue(this);
 
     }

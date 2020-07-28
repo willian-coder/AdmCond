@@ -21,8 +21,8 @@
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:background="@drawable/btn_main_formato"
-            android:drawableTop="@drawable/inquilinos"
-            android:text="Moradores"
+            android:drawableTop="@drawable/nova_leitura"
+            android:text="Leituras"
             android:textSize="21sp" />
 
         <Button
@@ -54,6 +54,7 @@
             android:textSize="21sp" />
 
         <Button
+            android:id="@+id/btnCondominioId"
             android:layout_width="170dp"
             android:layout_height="170dp"
             android:layout_marginStart="25dp"

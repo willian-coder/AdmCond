@@ -1,5 +1,5 @@
 package com.projeto.admcond.login;
-
+/*Created by Willianlq*/
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
 
         //Usuario Autenticado
         auth = ConfigDb.getRefAutenticacao();
-//        auth.signOut();
+
         verificadoUsuarioLogado();
         //Wi-fi
         verificaConexao();
@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), CadastroUsuario.class));
+                finish();
             }
         });
     }
@@ -158,6 +159,7 @@ public class LoginActivity extends AppCompatActivity {
     public void verificadoUsuarioLogado() {
         if (auth.getCurrentUser() != null) {
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
         }
     }
 }

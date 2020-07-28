@@ -1,5 +1,5 @@
 package com.projeto.admcond.cadastro;
-
+/*Created by Willianlq*/
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +20,6 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.projeto.admcond.MainActivity;
 import com.projeto.admcond.R;
 import com.projeto.admcond.configfirebase.ConfigDb;
-import com.projeto.admcond.configfirebase.NovoCondominio;
 import com.projeto.admcond.configfirebase.NovoUsuario;
 
 public class CadastroUsuario extends AppCompatActivity {

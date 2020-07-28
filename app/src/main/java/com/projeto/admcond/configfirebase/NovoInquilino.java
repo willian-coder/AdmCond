@@ -1,11 +1,8 @@
-/*Por @willianlq --------
-
---------*/
 package com.projeto.admcond.configfirebase;
+/*Created by Willianlq*/
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Exclude;
-import com.projeto.admcond.configfirebase.ConfigDb;
 
 import java.io.Serializable;
 
@@ -18,7 +15,6 @@ public class NovoInquilino implements Serializable {
     private String valorAluguel;
 
     //Dados de consumo
-    private String data;
     private String leitAnterior;
     private String leiturAtual;
     private String consumo;
@@ -34,35 +30,26 @@ public class NovoInquilino implements Serializable {
         setIdInquilino(novoInquilino.push().getKey());
     }
 
-    //Ajustar
     public void salvar() {
         String idUsuario = ConfigDb.getIdUsuario();
         DatabaseReference novoUsuarioRef = ConfigDb.getRefFirebase()
                 .child("Inquilino");
 
         novoUsuarioRef.child(idUsuario)
-                .child(getIdInquilino())
+                //Usado como referencia da child nome do inquilino
+                .child(getNomeInquilino())
                 .setValue(this);
-
     }
 
     //Ajustar
     public void salvarDadosConsumo() {
         String idConsumo = ConfigDb.getIdUsuario();
         DatabaseReference dbAgua = ConfigDb.getRefFirebase()
-                .child("Inquilino")
                 .child("Agua");
+
         dbAgua.child(idConsumo)
                 .setValue(this);
 
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
     }
 
     public String getLeitAnterior() {
@@ -129,7 +116,6 @@ public class NovoInquilino implements Serializable {
         this.condominio = condominio;
     }
 
-    @Exclude
     public String getIdInquilino() {
         return idInquilino;
     }

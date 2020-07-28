@@ -13,14 +13,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cadastro.CadastroMesConsumo"></activity>
-        <activity android:name=".DataConsumoActivity" />
-        <activity android:name=".SuporteActivity" />
-        <activity android:name=".TipoConsumo" />
-        <activity android:name=".cadastro.CadastroCondominio" />
+        <activity
+            android:name=".cadastro.CadastroNovaLeitura"
+            android:label="Nova leitura" />
+        <activity
+            android:name=".DataConsumoActivity"
+            android:label="Adicionar leitura" />
+        <activity
+            android:name=".SuporteActivity"
+            android:label="Suporte" />
+        <activity
+            android:name=".TipoConsumo"
+            android:label="Tipo de consumo" />
+        <activity
+            android:name=".cadastro.CadastroCondominio"
+            android:label="Cadastro condomínio" />
         <activity
             android:name=".DetalhesInquilinosActivity"
-            android:label="Consumo Inquílino" />
+            android:label="Consumo inquílino" />
         <activity
             android:name=".configfirebase.ResetSenha"
             android:label="Redefinição de senha" />
@@ -32,13 +42,13 @@
             android:label="Relatórios" />
         <activity
             android:name=".cadastro.CadastroMorador"
-            android:label="Add Morador" />
+            android:label="Adicionar morador" />
         <activity
             android:name=".cadastro.CadastroUsuario"
-            android:label="Cadastro" />
+            android:label="Cadastro síndico" />
         <activity
             android:name=".MainActivity"
-            android:label="Menu Principal" />
+            android:label="Menu principal" />
         <activity android:name=".login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

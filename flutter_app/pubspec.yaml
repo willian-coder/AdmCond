@@ -1,0 +1,21 @@
+name: admcond
+description: Base do AdmCond 2.0 para administração de condomínios.
+publish_to: none
+version: 2.0.0+1
+
+environment:
+  sdk: ^3.14.0
+  flutter: '>=3.50.0'
+
+dependencies:
+  material_ui: ^1.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true

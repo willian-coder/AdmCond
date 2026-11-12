@@ -43,10 +43,9 @@ da configuração necessária em uma máquina de desenvolvimento comum.
 
 A branch local é `feature/flutter-migration`, baseada no commit
 `e076a3a7743be6b9094aef6b01b5394aea606455` de `master`.
-A criação da branch remota via integração GitHub e o push de verificação via CLI
-foram recusados com HTTP 403. Não foi possível abrir um PR sem publicar a branch.
-Nenhum merge ou auto-merge foi realizado.
+Na primeira tentativa, a criação da branch remota e o push foram recusados com
+HTTP 403. Após a liberação de permissões pelo proprietário, uma nova verificação
+de push em 12/11/2026 confirmou acesso de escrita via CLI.
 
-Após liberar escrita (`Contents` e `Pull requests`) para a integração/credencial
-usada neste repositório, publicar a branch e abrir o PR para `master`. O texto
-preparado está em [pull-request.md](pull-request.md).
+A entrega será publicada nessa branch, com PR direcionado a `master`, sem merge
+ou auto-merge. O texto de revisão está em [pull-request.md](pull-request.md).
